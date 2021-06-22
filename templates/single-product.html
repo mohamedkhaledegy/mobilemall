@@ -234,23 +234,31 @@
                                         </div>
                                         <div role="tabpanel" class="tab-pane fade" id="profile">
                                             <h2>Spares</h2>
-                                            <div class="submit-review">
-                                                <p><label for="name">Name</label> <input name="name" type="text"></p>
-                                                <p><label for="email">Email</label> <input name="email" type="email"></p>
-                                                <div class="rating-chooser">
-                                                    <p>Your rating</p>
-
-                                                    <div class="rating-wrap-post">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
+                                            <div class="row spares">
+                                                <div class="col-3 spare_card">
+                                                    <div class="card spare_card">
+                                                        <div class="card-header text-center">
+                                                            Screen
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <img src="{% static 'img/note20-lcd.jpg' %}">
+                                                            <p class="btn-primary">Request</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <p><label for="review">Your review</label> <textarea name="review" id="" cols="30" rows="10"></textarea></p>
-                                                <p><input type="submit" value="Submit"></p>
+                                                <div class="col-3 spare_card">
+                                                    <div class="card spare_card">
+                                                        <div class="card-header text-center">
+                                                            Battery
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <img src="{% static 'img/note_20_battery.jpg' %}">
+                                                            <p class="card-text"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
