@@ -1,11 +1,4 @@
-{% extends 'base.html' %} 
-{% load static %}
-
-{% block title %}
-Samsung Note 20
-{% endblock title %}
-
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block title %} Samsung Note 20 {% endblock title %} {% block content %}
 
 <div class="product-big-title-area">
     <div class="container">
@@ -37,14 +30,14 @@ Samsung Note 20
                         <div class="col-sm-6">
                             <div class="product-images">
                                 <div class="product-main-img">
-                                    <img src="{% static 'img/samsung-galaxy-note20.jpg' %}"  alt="">
+                                    <img src="{% static 'img/samsung-galaxy-note20.jpg' %}" alt="">
                                 </div>
 
                                 <div class="product-gallery">
-                                    <img src="{% static 'img/product-thumb-1.jpg' %}"  alt="">
-                                    <img src="{% static 'img/product-thumb-2.jpg' %}"  alt="">
-                                    <img src="{% static 'img/product-thumb-3.jpg' %}"  alt="">
-                                    <img src="{% static 'img/product-thumb-4.jpg' %}"  alt="">
+                                    <img src="{% static 'img/product-thumb-1.jpg' %}" alt="">
+                                    <img src="{% static 'img/product-thumb-2.jpg' %}" alt="">
+                                    <img src="{% static 'img/product-thumb-3.jpg' %}" alt="">
+                                    <img src="{% static 'img/product-thumb-4.jpg' %}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -75,7 +68,33 @@ Samsung Note 20
                                     <div class="tab-content">
                                         <div role="tabpanel" class="tab-pane fade in active" id="home">
                                             <h2>Mobile Features</h2>
-                                            <p>Samsung NOte 20</p>
+                                            <table class="table table-bordered">
+                                                <tbody>
+                                                    <tr class="techSpecRow">
+                                                        <th colspan="2">Mobile Details</th>
+                                                    </tr>
+                                                    <tr class="techSpecRow">
+                                                        <td class="techSpecTD1">Brand: </td>
+                                                        <td class="techSpecTD2">Fujifilm</td>
+                                                    </tr>
+                                                    <tr class="techSpecRow">
+                                                        <td class="techSpecTD1">Model:</td>
+                                                        <td class="techSpecTD2">FinePix S2950HD</td>
+                                                    </tr>
+                                                    <tr class="techSpecRow">
+                                                        <td class="techSpecTD1">Released on:</td>
+                                                        <td class="techSpecTD2"> 2011-01-28</td>
+                                                    </tr>
+                                                    <tr class="techSpecRow">
+                                                        <td class="techSpecTD1">Dimensions:</td>
+                                                        <td class="techSpecTD2"> 5.50" h x 5.50" w x 2.00" l, .75 pounds</td>
+                                                    </tr>
+                                                    <tr class="techSpecRow">
+                                                        <td class="techSpecTD1">Display size:</td>
+                                                        <td class="techSpecTD2">3</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
 
                                             <p>Mauris placerat vitae lorem gravida viverra. Mauris in fringilla ex. Nulla facilisi. Etiam scelerisque tincidunt quam facilisis lobortis. In malesuada pulvinar neque a consectetur. Nunc aliquam gravida purus,
                                                 non malesuada sem accumsan in. Morbi vel sodales libero.</p>

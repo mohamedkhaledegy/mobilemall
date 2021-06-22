@@ -1,4 +1,9 @@
-.img .img_brand_logo {
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.img_brand_logo {
     border-radius: 8px;
     width: 226.667px;
     margin-right: 20px;
