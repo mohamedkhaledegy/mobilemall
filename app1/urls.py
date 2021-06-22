@@ -5,5 +5,6 @@ from django.conf.urls import url
 
 urlpatterns = [
     path('',views.index1 , name='index1' ),
-    path('samasung-note-20',views.single_product , name='product' ),
+    path('samsung-note-20',views.single_product , name='product' ),
+    path('samsung',views.brand_devices , name='product' ),
 ]

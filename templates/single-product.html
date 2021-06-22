@@ -16,16 +16,13 @@
     <div class="zigzag-bottom"></div>
     <div class="container">
         <div class="row">
-
-
             <div class="col-md-10">
                 <div class="product-content-right">
                     <div class="product-breadcroumb">
                         <a href="/">Home</a>
-                        <a href="#">Samsung</a>
-                        <a href="">Samsung Note 20</a>
+                        <a href="samsung">Samsung</a>
+                        <span href="">Samsung Note 20</span>
                     </div>
-
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="product-images">
@@ -57,13 +54,13 @@
                                 </form>
 
                                 <div class="product-inner-category">
-                                    <p>Category: <a href="">Samsung</a>. Tags: <a href="">awesome</a>, <a href="">best</a>, <a href="">sale</a>, <a href="">shoes</a>. </p>
+                                    <p>Category: <a href="samsung">Samsung</a>. Tags: <a href="">awesome</a>, <a href="">best</a>, <a href="">sale</a>, <a href="">shoes</a>. </p>
                                 </div>
-
                                 <div role="tabpanel">
                                     <ul class="product-tab" role="tablist">
                                         <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Features</a></li>
                                         <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Spares</a></li>
+                                        <li role="presentation"><a href="#price" aria-controls="price" role="tab" data-toggle="tab">Price</a></li>
                                     </ul>
                                     <div class="tab-content">
                                         <div role="tabpanel" class="tab-pane fade in active" id="home">
@@ -228,28 +225,47 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
-
                                             <p>Mauris placerat vitae lorem gravida viverra. Mauris in fringilla ex. Nulla facilisi. Etiam scelerisque tincidunt quam facilisis lobortis. In malesuada pulvinar neque a consectetur. Nunc aliquam gravida purus,
                                                 non malesuada sem accumsan in. Morbi vel sodales libero.</p>
                                         </div>
                                         <div role="tabpanel" class="tab-pane fade" id="profile">
-                                            <h2>Spares</h2>
-                                            <div class="submit-review">
-                                                <p><label for="name">Name</label> <input name="name" type="text"></p>
-                                                <p><label for="email">Email</label> <input name="email" type="email"></p>
-                                                <div class="rating-chooser">
-                                                    <p>Your rating</p>
+                                            Spare Parts
+                                            <div class="row spares">
 
-                                                    <div class="rating-wrap-post">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
+                                                <div class="col-3 spare_card">
+                                                    <div class="card spare_card">
+                                                        <div class="card-header text-center">
+                                                            Screen
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <img src="{% static 'img/note20-lcd.jpg' %}">
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <a href="#" class="badge badge-primary">Details</a>
+                                                            <a href="#" class="badge badge-success">Request</a>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <p><label for="review">Your review</label> <textarea name="review" id="" cols="30" rows="10"></textarea></p>
-                                                <p><input type="submit" value="Submit"></p>
+                                                <div class="col-3 spare_card">
+                                                    <div class="card spare_card">
+                                                        <div class="card-header text-center">
+                                                            Battery
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <img src="{% static 'img/note_20_battery.jpg' %}">
+                                                            <a href="#" class="badge badge-primary">Details</a>
+                                                            <a href="#" class="badge badge-success">Request</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane fade" id="price">
+                                            <div class="card">
+                                                <div class='text-info'>
+                                                    <p>Price:</p><span>12600 LE</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -365,82 +381,4 @@
 </div>
 
 
-<div class="footer-top-area">
-    <div class="zigzag-bottom"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
-                <div class="footer-about-us">
-                    <h2>e<span>Electronics</span></h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit,
-                        debitis, quisquam. Laborum commodi veritatis magni at?</p>
-                    <div class="footer-social">
-                        <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-                        <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-                        <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
-                        <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-                        <a href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6">
-                <div class="footer-menu">
-                    <h2 class="footer-wid-title">User Navigation </h2>
-                    <ul>
-                        <li><a href="">My account</a></li>
-                        <li><a href="">Order history</a></li>
-                        <li><a href="">Wishlist</a></li>
-                        <li><a href="">Vendor contact</a></li>
-                        <li><a href="">Front page</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6">
-                <div class="footer-menu">
-                    <h2 class="footer-wid-title">Categories</h2>
-                    <ul>
-                        <li><a href="">Mobile Phone</a></li>
-                        <li><a href="">Home accesseries</a></li>
-                        <li><a href="">LED TV</a></li>
-                        <li><a href="">Computer</a></li>
-                        <li><a href="">Gadets</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6">
-                <div class="footer-newsletter">
-                    <h2 class="footer-wid-title">Newsletter</h2>
-                    <p>Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
-                    <div class="newsletter-form">
-                        <input type="email" placeholder="Type your email">
-                        <input type="submit" value="Subscribe">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="footer-bottom-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="copyright">
-                    <p>&copy; 2015 eElectronics. All Rights Reserved. Coded with <i class="fa fa-heart"></i> by <a href="http://wpexpand.com" target="_blank">WP Expand</a></p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="footer-card-icon">
-                    <i class="fa fa-cc-discover"></i>
-                    <i class="fa fa-cc-mastercard"></i>
-                    <i class="fa fa-cc-paypal"></i>
-                    <i class="fa fa-cc-visa"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{% endblock content %}
+{% endblock content %} © 2021 GitHub, Inc. Terms Privacy Security Status Docs Contact GitHub Pricing API Training Blog About Loading complete

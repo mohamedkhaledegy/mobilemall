@@ -10,3 +10,7 @@ def index1(request):
 def single_product(request):
     context = {'device' : 'divs' }
     return render(request , 'single-product.html',context)
+
+def brand_devices(request):
+    context = {'device' : 'divs' }
+    return render(request , 'brand-devices.html',context)

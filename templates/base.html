@@ -7,9 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-    {% block title %}
-    Mobile Mall - قطع غيار واجهزة واكسسوارات ومستعمل
-    {% endblock title %}
+        {% block title %} Mobile Mall - قطع غيار واجهزة واكسسوارات ومستعمل {% endblock title %}
     </title>
 
     <!-- Google Fonts -->
@@ -36,7 +34,7 @@
 
 <body>
 
-<div class='content_body'>
+    <div class='content_body'>
 
         <div class="header-area">
             <div class="container">
@@ -124,15 +122,15 @@
         <!-- End mainmenu area -->
 
 
-        
-        <!-- Start Content -->
-        {% block content %} 
 
-        {% endblock content %}
+        <!-- Start Content -->
+        {% block content %} {% endblock content %}
         <!-- End Content -->
 
+        {% include 'footer.html' %}
+
         <!-- End div rtl content -->
-        </div>
+    </div>
 
     <!-- Latest jQuery form server -->
     <script src="https://code.jquery.com/jquery.min.js "></script>
