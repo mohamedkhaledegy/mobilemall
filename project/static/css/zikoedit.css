@@ -12,3 +12,11 @@ img {
     margin-right: auto;
     width: 50%;
 }
+
+.spare_card{
+    width: 120px;
+    margin: auto;
+}
+
+.spares{
+    display: flex;
