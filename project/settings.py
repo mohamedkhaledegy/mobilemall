@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app1',
+    'mobiles',
+    'accounts',
     'widget_tweaks',
     'import_export',
 ]

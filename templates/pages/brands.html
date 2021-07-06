@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section class="container">
+    <div class="brands-content">
+        <div>
+            {% for brand in brands %}
+            <div class="card card-brand">
+                <div class="device-title">
+                    <h4>{{brand}}</h4>
+                </div>
+                <div class="card-body">
+                    <div class="device-image">
+
+                    </div>
+
+                    <div class="btn-card-devices">
+                        <a href="{% url 'brand-mobiles' %}" class="btn btn-outline-info">Mobiles</a>
+                        <a href="{% url 'brand-spares' %}" class="btn btn-outline-success">Spares</a>
+                        <a href="{% url 'brand-accessories' %}" class="btn btn-outline-warning">Accessories</a>
+                    </div>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock content %}

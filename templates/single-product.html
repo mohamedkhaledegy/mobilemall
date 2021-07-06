@@ -1,4 +1,12 @@
-{% extends 'base.html' %} {% load static %} {% block title %} Samsung Note 20 {% endblock title %} {% block content %}
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block title %} 
+Samsung Note 20 
+{% endblock title %} 
+
+
+{% block content %}
 
 <div class="product-big-title-area">
     <div class="container">
@@ -24,10 +32,10 @@
                         <span href="">Samsung Note 20</span>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-3">
                             <div class="product-images">
                                 <div class="product-main-img">
-                                    <img src="{% static 'img/samsung-galaxy-note20.jpg' %}" alt="">
+                                    <img src="{{device.imageDev.url}}" alt="">
                                 </div>
 
                                 <div class="product-gallery">
@@ -41,344 +49,462 @@
 
                         <div class="col-sm-6">
                             <div class="product-inner">
-                                <h2 class="product-name">Samsung Note 20</h2>
+                                <h2 class="product-name">{{device.nameDev}}</h2>
                                 <div class="product-inner-price">
-                                    <ins>$1000.00</ins> <del>$1200.00</del>
+                                
                                 </div>
-
-                                <form action="" class="cart">
-                                    <div class="quantity">
-                                        <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+                                    <div class="features table-responsive-xl">
+                                        <table class="">
+                                            <caption>features</caption>
+       
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">Brand</th>
+                                                    <td>{{device.brand}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Model</th>
+                                                    <td>{{device.modeldev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Network</th>
+                                                    <td>{{device.networkDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Announced</th>
+                                                    <td>{{device.announcedDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Status</th>
+                                                    <td>{{device.statusDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Dimensions</th>
+                                                    <td>{{device.dimensionsDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Wight</th>
+                                                    <td>{{device.buildDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Build</th>
+                                                    <td>{{device.buildDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Sim</th>
+                                                    <td>{{device.simDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Display Type</th>
+                                                    <td>{{device.displayTypeDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Display Size</th>
+                                                    <td>{{device.displaySizeDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Display Resolution</th>
+                                                    <td>{{device.displayResDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">OS</th>
+                                                    <td>{{device.oSDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Chipset</th>
+                                                    <td>{{device.chipsetDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">CPU</th>
+                                                    <td>{{device.cPUDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Card Slot</th>
+                                                    <td>{{device.cardSlotDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Internal</th>
+                                                    <td>{{device.internalDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Main Camera</th>
+                                                    <td>{{device.mainCameraDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Main Cam Features</th>
+                                                    <td>{{device.main_camera_featuresDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Main Cam Video</th>
+                                                    <td>{{device.main_camera_videoDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Selfie Cam</th>
+                                                    <td>{{device.selfieCameraDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Selfie Video</th>
+                                                    <td>{{device.selfie_camera_videoDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Loudspeaker</th>
+                                                    <td>{{device.loudspeakerDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Wlan</th>
+                                                    <td>{{device.wlanDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Bluetooth</th>
+                                                    <td>{{device.bluetoothDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Nfc</th>
+                                                    <td>{{device.nfcDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Radio</th>
+                                                    <td>{{device.radioDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Usb</th>
+                                                    <td>{{device.usbDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Sensors</th>
+                                                    <td>{{device.sensorsDev}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">BatteryDev</th>
+                                                    <td>{{device.batteryDev}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    <button class="add_to_cart_button" type="submit">Add to cart</button>
-                                </form>
+                                    <!--  
+                                    <div role="tabpanel">
+                                        <ul class="product-tab" role="tablist">
+                                            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Features</a></li>
+                                            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Spares</a></li>
+                                            <li role="presentation"><a href="#price" aria-controls="price" role="tab" data-toggle="tab">Price</a></li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div role="tabpanel" class="tab-pane fade in active" id="home">
+                                                <h2>Mobile Features</h2>
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr class="techSpecRow">
+                                                            <th colspan="2">Mobile Details</th>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Model:</td>
+                                                            <td class="techSpecTD2">SM-N980F, SM-N980F/DS</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Technology:</td>
+                                                            <td class="techSpecTD2"> GSM / CDMA / HSPA / EVDO / LTE</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Announced:</td>
+                                                            <td class="techSpecTD2"> 2020, August 05</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Status:</td>
+                                                            <td class="techSpecTD2"> Available. Released 2020, August 21</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Dimensions:</td>
+                                                            <td class="techSpecTD2">
+                                                                161.6 x 75.2 x 8.3 mm (6.36 x 2.96 x 0.33 in)</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Weight:</td>
+                                                            <td class="techSpecTD2"> GSM / CDMA / HSPA / EVDO / LTE</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Build:</td>
+                                                            <td class="techSpecTD2">Glass front (Gorilla Glass 5), plastic back</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Sim:</td>
+                                                            <td class="techSpecTD2"> Single SIM (Nano-SIM and/or eSIM) or Hybrid Dual SIM (Nano-SIM, dual stand-by)</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Display Type:</td>
+                                                            <td class="techSpecTD2">Super AMOLED Plus, HDR10+</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Display size:</td>
+                                                            <td class="techSpecTD2">6.7 inches, 108.4 cm2 (~89.2% screen-to-body ratio)</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Display Resolution:</td>
+                                                            <td class="techSpecTD2">1080 x 2400 pixels, 20:9 ratio (~393 ppi density)</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Display Protection:</td>
+                                                            <td class="techSpecTD2">Corning Gorilla Glass 5</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">OS:</td>
+                                                            <td class="techSpecTD2">Android 10, upgradable to Android 11, One UI 3.0</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Chipset:</td>
+                                                            <td class="techSpecTD2">Exynos 990 (7 nm+) - Global Qualcomm SM8250 Snapdragon 865 5G+ (7 nm+) - USA
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">CPU:</td>
+                                                            <td class="techSpecTD2">
+                                                                Octa-core (2x2.73 GHz Mongoose M5 & 2x2.50 GHz Cortex-A76 & 4x2.0 GHz Cortex-A55) - Global Octa-core (1x3.0 GHz Kryo 585 & 3x2.42 GHz Kryo 585 & 4x1.8 GHz Kryo 585) - USA
 
-                                <div class="product-inner-category">
-                                    <p>Category: <a href="samsung">Samsung</a>. Tags: <a href="">awesome</a>, <a href="">best</a>, <a href="">sale</a>, <a href="">shoes</a>. </p>
-                                </div>
-                                <div role="tabpanel">
-                                    <ul class="product-tab" role="tablist">
-                                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Features</a></li>
-                                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Spares</a></li>
-                                        <li role="presentation"><a href="#price" aria-controls="price" role="tab" data-toggle="tab">Price</a></li>
-                                    </ul>
-                                    <div class="tab-content">
-                                        <div role="tabpanel" class="tab-pane fade in active" id="home">
-                                            <h2>Mobile Features</h2>
-                                            <table class="table table-bordered">
-                                                <tbody>
-                                                    <tr class="techSpecRow">
-                                                        <th colspan="2">Mobile Details</th>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Model:</td>
-                                                        <td class="techSpecTD2">SM-N980F, SM-N980F/DS</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Technology:</td>
-                                                        <td class="techSpecTD2"> GSM / CDMA / HSPA / EVDO / LTE</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Announced:</td>
-                                                        <td class="techSpecTD2"> 2020, August 05</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Status:</td>
-                                                        <td class="techSpecTD2"> Available. Released 2020, August 21</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Dimensions:</td>
-                                                        <td class="techSpecTD2">
-                                                            161.6 x 75.2 x 8.3 mm (6.36 x 2.96 x 0.33 in)</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Weight:</td>
-                                                        <td class="techSpecTD2"> GSM / CDMA / HSPA / EVDO / LTE</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Build:</td>
-                                                        <td class="techSpecTD2">Glass front (Gorilla Glass 5), plastic back</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Sim:</td>
-                                                        <td class="techSpecTD2"> Single SIM (Nano-SIM and/or eSIM) or Hybrid Dual SIM (Nano-SIM, dual stand-by)</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Display Type:</td>
-                                                        <td class="techSpecTD2">Super AMOLED Plus, HDR10+</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Display size:</td>
-                                                        <td class="techSpecTD2">6.7 inches, 108.4 cm2 (~89.2% screen-to-body ratio)</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Display Resolution:</td>
-                                                        <td class="techSpecTD2">1080 x 2400 pixels, 20:9 ratio (~393 ppi density)</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Display Protection:</td>
-                                                        <td class="techSpecTD2">Corning Gorilla Glass 5</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">OS:</td>
-                                                        <td class="techSpecTD2">Android 10, upgradable to Android 11, One UI 3.0</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Chipset:</td>
-                                                        <td class="techSpecTD2">Exynos 990 (7 nm+) - Global Qualcomm SM8250 Snapdragon 865 5G+ (7 nm+) - USA
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">CPU:</td>
-                                                        <td class="techSpecTD2">
-                                                            Octa-core (2x2.73 GHz Mongoose M5 & 2x2.50 GHz Cortex-A76 & 4x2.0 GHz Cortex-A55) - Global Octa-core (1x3.0 GHz Kryo 585 & 3x2.42 GHz Kryo 585 & 4x1.8 GHz Kryo 585) - USA
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">GPU:</td>
+                                                            <td class="techSpecTD2">
+                                                                Mali-G77 MP11 - Global Adreno 650 - USA
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Card slot:</td>
+                                                            <td class="techSpecTD2">No</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Internal:</td>
+                                                            <td class="techSpecTD2">256GB 8GB RAM</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Main Camera :</td>
+                                                            <td class="techSpecTD2">
+                                                                12 MP, f/1.8, 26mm (wide), 1/1.76", 1.8µm, Dual Pixel PDAF, OIS 64 MP, f/2.0, 27mm (telephoto), 1/1.72", 0.8µm, PDAF, OIS, 3x hybrid zoom 12 MP, f/2.2, 120˚, 13mm (ultrawide), 1/2.55", 1.4µm
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Features:</td>
+                                                            <td class="techSpecTD2">LED flash, auto-HDR, panorama</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Video:</td>
+                                                            <td class="techSpecTD2">8K@24fps, 4K@30/60fps, 1080p@30/60/240fps, 720p@960fps, HDR10+, stereo sound rec., gyro-EIS & OIS</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Selfie Camera:</td>
+                                                            <td class="techSpecTD2">10 MP, f/2.2, 26mm (wide), 1/3.2", 1.22µm, Dual Pixel PDAF</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Features:</td>
+                                                            <td class="techSpecTD2">Dual video call, Auto-HDR</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Video:</td>
+                                                            <td class="techSpecTD2">4K@30/60fps, 1080p@30fps</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">SOUND:</td>
+                                                            <td class="techSpecTD2">Loudspeaker Yes, with stereo speakers 3.5mm jack=No
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">WLAN:</td>
+                                                            <td class="techSpecTD2">
+                                                                Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, Wi-Fi Direct, hotspot
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Bluetooth:</td>
+                                                            <td class="techSpecTD2">5.0, A2DP, LE, aptX</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">GPS:</td>
+                                                            <td class="techSpecTD2">Yes, with A-GPS, GLONASS, BDS, GALILEO</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">NFC:</td>
+                                                            <td class="techSpecTD2">Yes</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Radio:</td>
+                                                            <td class="techSpecTD2">FM radio (Snapdragon model only; market/operator dependent)</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">USB:</td>
+                                                            <td class="techSpecTD2">USB Type-C 3.2, USB On-The-Go</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Sensors:</td>
+                                                            <td class="techSpecTD2">Fingerprint (under display, ultrasonic), accelerometer, gyro, proximity, compass, barometer</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">BATTERY Type:</td>
+                                                            <td class="techSpecTD2">Li-Ion 4300 mAh, non-removable</td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Charging:</td>
+                                                            <td class="techSpecTD2">Fast charging 25W Fast Qi/PMA wireless charging 15W USB Power Delivery 3.0 Reverse wireless charging 4.5W
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="techSpecRow">
+                                                            <td class="techSpecTD1">Colors:</td>
+                                                            <td class="techSpecTD2">Mystic Green, Mystic Bronze, Mystic Gray, Mystic Red, Mystic Blue</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p>Mauris placerat vitae lorem gravida viverra. Mauris in fringilla ex. Nulla facilisi. Etiam scelerisque tincidunt quam facilisis lobortis. In malesuada pulvinar neque a consectetur. Nunc aliquam gravida purus,
+                                                    non malesuada sem accumsan in. Morbi vel sodales libero.</p>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane fade" id="profile">
+                                                Spare Parts
+                                                <div class="row spares">
 
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">GPU:</td>
-                                                        <td class="techSpecTD2">
-                                                            Mali-G77 MP11 - Global Adreno 650 - USA
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Card slot:</td>
-                                                        <td class="techSpecTD2">No</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Internal:</td>
-                                                        <td class="techSpecTD2">256GB 8GB RAM</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Main Camera :</td>
-                                                        <td class="techSpecTD2">
-                                                            12 MP, f/1.8, 26mm (wide), 1/1.76", 1.8µm, Dual Pixel PDAF, OIS 64 MP, f/2.0, 27mm (telephoto), 1/1.72", 0.8µm, PDAF, OIS, 3x hybrid zoom 12 MP, f/2.2, 120˚, 13mm (ultrawide), 1/2.55", 1.4µm
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Features:</td>
-                                                        <td class="techSpecTD2">LED flash, auto-HDR, panorama</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Video:</td>
-                                                        <td class="techSpecTD2">8K@24fps, 4K@30/60fps, 1080p@30/60/240fps, 720p@960fps, HDR10+, stereo sound rec., gyro-EIS & OIS</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Selfie Camera:</td>
-                                                        <td class="techSpecTD2">10 MP, f/2.2, 26mm (wide), 1/3.2", 1.22µm, Dual Pixel PDAF</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Features:</td>
-                                                        <td class="techSpecTD2">Dual video call, Auto-HDR</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Video:</td>
-                                                        <td class="techSpecTD2">4K@30/60fps, 1080p@30fps</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">SOUND:</td>
-                                                        <td class="techSpecTD2">Loudspeaker Yes, with stereo speakers 3.5mm jack=No
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">WLAN:</td>
-                                                        <td class="techSpecTD2">
-                                                            Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, Wi-Fi Direct, hotspot
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Bluetooth:</td>
-                                                        <td class="techSpecTD2">5.0, A2DP, LE, aptX</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">GPS:</td>
-                                                        <td class="techSpecTD2">Yes, with A-GPS, GLONASS, BDS, GALILEO</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">NFC:</td>
-                                                        <td class="techSpecTD2">Yes</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Radio:</td>
-                                                        <td class="techSpecTD2">FM radio (Snapdragon model only; market/operator dependent)</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">USB:</td>
-                                                        <td class="techSpecTD2">USB Type-C 3.2, USB On-The-Go</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Sensors:</td>
-                                                        <td class="techSpecTD2">Fingerprint (under display, ultrasonic), accelerometer, gyro, proximity, compass, barometer</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">BATTERY Type:</td>
-                                                        <td class="techSpecTD2">Li-Ion 4300 mAh, non-removable</td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Charging:</td>
-                                                        <td class="techSpecTD2">Fast charging 25W Fast Qi/PMA wireless charging 15W USB Power Delivery 3.0 Reverse wireless charging 4.5W
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="techSpecRow">
-                                                        <td class="techSpecTD1">Colors:</td>
-                                                        <td class="techSpecTD2">Mystic Green, Mystic Bronze, Mystic Gray, Mystic Red, Mystic Blue</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <p>Mauris placerat vitae lorem gravida viverra. Mauris in fringilla ex. Nulla facilisi. Etiam scelerisque tincidunt quam facilisis lobortis. In malesuada pulvinar neque a consectetur. Nunc aliquam gravida purus,
-                                                non malesuada sem accumsan in. Morbi vel sodales libero.</p>
-                                        </div>
-                                        <div role="tabpanel" class="tab-pane fade" id="profile">
-                                            Spare Parts
-                                            <div class="row spares">
-
-                                                <div class="col-3 spare_card">
-                                                    <div class="card spare_card">
-                                                        <div class="card-header text-center">
-                                                            Screen
+                                                    <div class="col-3 spare_card">
+                                                        <div class="card spare_card">
+                                                            <div class="card-header text-center">
+                                                                Screen
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <img src="{% static 'img/note20-lcd.jpg' %}">
+                                                            </div>
+                                                            <div class="card-footer">
+                                                                <a href="#" class="badge badge-primary">Details</a>
+                                                                <a href="#" class="badge badge-success">Request</a>
+                                                            </div>
                                                         </div>
-                                                        <div class="card-body">
-                                                            <img src="{% static 'img/note20-lcd.jpg' %}">
-                                                        </div>
-                                                        <div class="card-footer">
-                                                            <a href="#" class="badge badge-primary">Details</a>
-                                                            <a href="#" class="badge badge-success">Request</a>
+                                                    </div>
+                                                    <div class="col-3 spare_card">
+                                                        <div class="card spare_card">
+                                                            <div class="card-header text-center">
+                                                                Battery
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <img src="{% static 'img/note_20_battery.jpg' %}">
+                                                                <a href="#" class="badge badge-primary">Details</a>
+                                                                <a href="#" class="badge badge-success">Request</a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-3 spare_card">
-                                                    <div class="card spare_card">
-                                                        <div class="card-header text-center">
-                                                            Battery
-                                                        </div>
-                                                        <div class="card-body">
-                                                            <img src="{% static 'img/note_20_battery.jpg' %}">
-                                                            <a href="#" class="badge badge-primary">Details</a>
-                                                            <a href="#" class="badge badge-success">Request</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
 
-                                        </div>
-                                        <div role="tabpanel" class="tab-pane fade" id="price">
-                                            <div class="card">
-                                                <div class='text-info'>
-                                                    <p>Price:</p><span>12600 LE</span>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane fade" id="price">
+                                                <div class="card">
+                                                    <div class='text-info'>
+                                                        <p>Price:</p><span>12600 LE</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    -->
                                 </div>
-
                             </div>
                         </div>
-                    </div>
 
 
-                    <div class="related-products-wrapper">
-                        <h2 class="related-products-title">Related Products</h2>
-                        <div class="related-products-carousel">
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="img/product-1.jpg" alt="">
-                                    <div class="product-hover">
-                                        <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                        <div class="related-products-wrapper">
+                            <h2 class="related-products-title">Related Products</h2>
+                            <div class="related-products-carousel">
+                                <div class="single-product">
+                                    <div class="product-f-image">
+                                        <img src="img/product-1.jpg" alt="">
+                                        <div class="product-hover">
+                                            <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                            <a href="" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                        </div>
+                                    </div>
+
+                                    <h2><a href="">Sony Smart TV - 2015</a></h2>
+
+                                    <div class="product-carousel-price">
+                                        <ins>$700.00</ins> <del>$800.00</del>
                                     </div>
                                 </div>
+                                <div class="single-product">
+                                    <div class="product-f-image">
+                                        <img src="img/product-2.jpg" alt="">
+                                        <div class="product-hover">
+                                            <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                            <a href="" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                        </div>
+                                    </div>
 
-                                <h2><a href="">Sony Smart TV - 2015</a></h2>
-
-                                <div class="product-carousel-price">
-                                    <ins>$700.00</ins> <del>$800.00</del>
-                                </div>
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="img/product-2.jpg" alt="">
-                                    <div class="product-hover">
-                                        <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                    <h2><a href="">Apple new mac book 2015 March :P</a></h2>
+                                    <div class="product-carousel-price">
+                                        <ins>$899.00</ins> <del>$999.00</del>
                                     </div>
                                 </div>
+                                <div class="single-product">
+                                    <div class="product-f-image">
+                                        <img src="img/product-3.jpg" alt="">
+                                        <div class="product-hover">
+                                            <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                            <a href="" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                        </div>
+                                    </div>
 
-                                <h2><a href="">Apple new mac book 2015 March :P</a></h2>
-                                <div class="product-carousel-price">
-                                    <ins>$899.00</ins> <del>$999.00</del>
-                                </div>
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="img/product-3.jpg" alt="">
-                                    <div class="product-hover">
-                                        <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                    <h2><a href="">Apple new i phone 6</a></h2>
+
+                                    <div class="product-carousel-price">
+                                        <ins>$400.00</ins> <del>$425.00</del>
                                     </div>
                                 </div>
+                                <div class="single-product">
+                                    <div class="product-f-image">
+                                        <img src="img/product-4.jpg" alt="">
+                                        <div class="product-hover">
+                                            <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                            <a href="" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                        </div>
+                                    </div>
 
-                                <h2><a href="">Apple new i phone 6</a></h2>
+                                    <h2><a href="">Sony playstation microsoft</a></h2>
 
-                                <div class="product-carousel-price">
-                                    <ins>$400.00</ins> <del>$425.00</del>
-                                </div>
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="img/product-4.jpg" alt="">
-                                    <div class="product-hover">
-                                        <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                    <div class="product-carousel-price">
+                                        <ins>$200.00</ins> <del>$225.00</del>
                                     </div>
                                 </div>
+                                <div class="single-product">
+                                    <div class="product-f-image">
+                                        <img src="img/product-5.jpg" alt="">
+                                        <div class="product-hover">
+                                            <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                            <a href="" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                        </div>
+                                    </div>
 
-                                <h2><a href="">Sony playstation microsoft</a></h2>
+                                    <h2><a href="">Sony Smart Air Condtion</a></h2>
 
-                                <div class="product-carousel-price">
-                                    <ins>$200.00</ins> <del>$225.00</del>
-                                </div>
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="img/product-5.jpg" alt="">
-                                    <div class="product-hover">
-                                        <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                    <div class="product-carousel-price">
+                                        <ins>$1200.00</ins> <del>$1355.00</del>
                                     </div>
                                 </div>
-
-                                <h2><a href="">Sony Smart Air Condtion</a></h2>
-
-                                <div class="product-carousel-price">
-                                    <ins>$1200.00</ins> <del>$1355.00</del>
-                                </div>
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="img/product-6.jpg" alt="">
-                                    <div class="product-hover">
-                                        <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                <div class="single-product">
+                                    <div class="product-f-image">
+                                        <img src="img/product-6.jpg" alt="">
+                                        <div class="product-hover">
+                                            <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                            <a href="" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <h2><a href="">Samsung gallaxy note 4</a></h2>
+                                    <h2><a href="">Samsung gallaxy note 4</a></h2>
 
-                                <div class="product-carousel-price">
-                                    <ins>$400.00</ins>
+                                    <div class="product-carousel-price">
+                                        <ins>$400.00</ins>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-2">
+                <div class="col-md-2">
 
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
-{% endblock content %} © 2021 GitHub, Inc. Terms Privacy Security Status Docs Contact GitHub Pricing API Training Blog About Loading complete
+    {% endblock content %} © 2021 GitHub, Inc. Terms Privacy Security Status Docs Contact GitHub Pricing API Training Blog About Loading complete

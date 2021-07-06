@@ -1,0 +1,85 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %}
+<div class='container-fluid devices-content'>
+    <div class="filter">
+        <form>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search Mobile Name">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <select id="inputState" class="form-control">
+                            <option selected> Brand... </option>
+                            <option value="1">Samsung</option>
+                            <option value="2">Apple</option>
+                            <option value="3">Huawei</option>
+                            <option value="4">Oppo</option>
+                            <option value="5">Xiaomi</option>
+                            <option value="6">Infinix</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <select id="inputState" class="form-control">
+                            <option selected> Storage... </option>
+                            <option value="1">512 MB</option>
+                            <option value="2">1 GB</option>
+                            <option value="3">2 GB</option>
+                            <option value="4">4 Gb</option>
+                            <option value="5">8 GB</option>
+                            <option value="6">16 GB</option>
+                            <option value="7">32 GB</option>
+                            <option value="8">64 GB</option>
+                            <option value="9">128 GB</option>
+                            <option value="10">256 GB</option>
+                            <option value="11">512 GB</option>
+                            <option value="12">1 TB</option>
+                            <option value="13">2 TB</option>
+                            <option value="13">4 TB</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Filter</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+    <div class="devs">
+
+        <div class="devices-list">
+            {% for dev in device  %}
+            <div class="device">
+                <div class="card-header device-title">
+                    {{dev.nameDev}}
+                </div>
+                <div class="card-body">
+                    <div class="device-image">
+                        {% if dev.imageDev %}
+
+                            <img class="card-img-top" src="{{ dev.imageDev.url }}">
+                        {% else %}
+                            <img class="card-img-top" src="{% static 'img/samsung-galaxy-note20.jpg' %}">
+                        
+                        {% endif %}
+                    </div>
+
+                    <div class="btn-card-devices">
+                        <a href="#"><span class="btn btn-primary">Details</span></a>
+                        <a href="#"><span class="btn btn-success">Spares</span></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+
+        </div>
+    </div>
+</div>
+{% endblock content %}
