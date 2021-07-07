@@ -22,11 +22,16 @@ class Brand(models.Model):
             ('Realme' , 'Realme'),
             ('Honor' , 'Honor'),
         ]
+    slug = models.SlugField(blank=True, null=True)
     name = models.CharField( choices=brand_nAME , max_length=100 , verbose_name=_('اسم البراند'))
     def __str__(self):
         return self.name
     def get_devices_count(self):
         return Device.objects.filter(Device__Brand=self).count()
+    def save(self , *args , **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.name)
+        super(Brand,self).save(*args, **kwargs)
 
 
 
@@ -113,6 +118,6 @@ class Spare(models.Model):
         return self.name
     
     def save(self , *args , **kwargs):
-        if not self.slug_dev:
-            self.slug_dev = slugify(self.name)
-        super(Device,self).save(*args, **kwargs)
+        if not self.slug:
+            self.slug = slugify(self.name)
+        super(Spare,self).save(*args, **kwargs)
