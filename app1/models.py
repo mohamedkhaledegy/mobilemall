@@ -1,10 +1,19 @@
 from django.db import models
 from django.db.models.enums import Choices
+from django.db.models.fields.files import ImageField
+from django.db.models.fields.related import ForeignKey
 from django.utils.translation import ugettext_lazy as _
 from django.utils import timezone
 from django.utils.text import slugify
 
 # Create your models here.
+
+class Color(models.Model):
+    name = models.CharField(max_length=120, blank=True, null=True )
+
+    def __str__(self):
+        return self.name
+
 
 class Brand(models.Model):
     brand_nAME = [
@@ -23,7 +32,7 @@ class Brand(models.Model):
             ('Honor' , 'Honor'),
         ]
     slug = models.SlugField(blank=True, null=True)
-    name = models.CharField( choices=brand_nAME , max_length=100 , verbose_name=_('اسم البراند'))
+    name = models.CharField( choices=brand_nAME , max_length=100 , verbose_name=_('Brand Name'))
     def __str__(self):
         return self.name
     def get_devices_count(self):
@@ -72,7 +81,8 @@ class Device(models.Model):
     batteryDev = models.CharField(max_length=500, verbose_name=_("Battery Type"), blank=True, null=True)
     priceDev = models.CharField(max_length=500, verbose_name=_("Price"), blank=True, null=True)
     imageDev = models.ImageField(upload_to='Devices/Devices_Img/', verbose_name=_("Image Device"), blank=True)
-    
+    color = models.ForeignKey( Color ,blank=True, null=True , on_delete=models.CASCADE)
+
     def save(self , *args , **kwargs):
         if not self.slug_dev:
             self.slug_dev = slugify(self.nameDev)
@@ -84,7 +94,7 @@ class Device(models.Model):
 class Spare(models.Model):
     spare_list = [
         
-            ('CompScreeb' , 'CompScreeb'),
+            ('CompScreen' , 'CompScreen'),
             ('Lcd' , 'Lcd'),
             ('Touch' , 'Touch'),
             ('SubBoard' , 'SubBoard'),
@@ -113,6 +123,11 @@ class Spare(models.Model):
     name = models.CharField( max_length=320, verbose_name=_("Name"))
     quality = models.CharField( choices=spare_quality , max_length=50, blank=True, null=True)
     warranty = models.IntegerField(default=0,  verbose_name=_("Warranty"))
+    code = models.CharField(max_length=320 , blank=True , null=True, verbose_name=_("Code"))
+    image = models.ImageField( upload_to=('Spare/Spare_img/'), verbose_name=_("Image Spare"), blank=True)
+    price  = models.DecimalField(default=00.00,decimal_places=2, max_digits=20,  verbose_name=_("Price"))
+    new_or_not = models.BooleanField(default=False,  verbose_name=_("Used Spare"))
+    color = models.ForeignKey( Color ,blank=True, null=True , on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
@@ -121,3 +136,5 @@ class Spare(models.Model):
         if not self.slug:
             self.slug = slugify(self.name)
         super(Spare,self).save(*args, **kwargs)
+
+
