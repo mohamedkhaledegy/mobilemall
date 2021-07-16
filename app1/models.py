@@ -16,23 +16,29 @@ class Color(models.Model):
 
 
 class Brand(models.Model):
-    brand_nAME = [
-            ('Samsung' , 'Samsung'),
-            ('Apple' , 'Apple'),
-            ('Huawei' , 'Huawei'),
-            ('Oppo' , 'Oppo'),
-            ('xiaomi' , 'xiaomi'),
+    brand_name = [
+            ('Samsung' , 'Samsung'), #1
+            ('Apple' , 'Apple'), #2
+            ('Huawei' , 'Huawei'), #3
+            ('Oppo' , 'Oppo'), #4
+            ('xiaomi' , 'xiaomi'),  
             ('Infinix' , 'Infinix'),
             ('Nokia' , 'Nokia'),
             ('Sony' , 'Sony'),
             ('LG' , 'LG'),
-            ('HTC' , 'HTC'),
+            ('HTC' , 'HTC'), #10
             ('Lenovo' , 'Lenovo'),
             ('Realme' , 'Realme'),
             ('Honor' , 'Honor'),
+            ('ZTE' , 'ZTE'), #14
+            ('Vivo' , 'Vivo'),
+            ('Alcatel' , 'Alcatel'),
+            ('Asus' , 'Asus'),
+            ('Motorola' , 'Motorola'),
+            ('Acer' , 'Acer'),
         ]
     slug = models.SlugField(blank=True, null=True)
-    name = models.CharField( choices=brand_nAME , max_length=100 , verbose_name=_('Brand Name'))
+    name = models.CharField( choices=brand_name , max_length=100 , verbose_name=_('Brand Name'))
     def __str__(self):
         return self.name
     def get_devices_count(self):
@@ -50,7 +56,7 @@ class Device(models.Model):
     slug_dev = models.SlugField(blank=True, null=True)
     brand = models.ForeignKey(Brand, blank=True, null=True, on_delete=models.PROTECT)
     modeldev = models.CharField(max_length=100, blank=True, null=True)
-    nameDev = models.CharField( primary_key=True , max_length=320, verbose_name=_("Name"))
+    nameDev = models.CharField(  max_length=320, verbose_name=_("Name"))
     networkDev = models.CharField(max_length=500, blank=True, null=True, verbose_name=_("Network"))
     announcedDev = models.CharField(max_length=500, blank=True, null=True, verbose_name=_("Announced"))
     statusDev = models.CharField(max_length=500, blank=True, null=True, verbose_name=_("Status"))
@@ -81,7 +87,9 @@ class Device(models.Model):
     batteryDev = models.CharField(max_length=500, verbose_name=_("Battery Type"), blank=True, null=True)
     priceDev = models.CharField(max_length=500, verbose_name=_("Price"), blank=True, null=True)
     imageDev = models.ImageField(upload_to='Devices/Devices_Img/', verbose_name=_("Image Device"), blank=True)
-    color = models.ForeignKey( Color ,blank=True, null=True , on_delete=models.CASCADE)
+    img_dev_full_1 = models.ImageField(upload_to='Devices/Devices_full_pic/', verbose_name=_("Image Device"), blank=True)
+    img_dev_full_2 = models.ImageField(upload_to='Devices/Devices_full_pic/', verbose_name=_("Image Device"), blank=True)
+    color = models.CharField( max_length=500, verbose_name=_("Color"), blank=True, null=True)
 
     def save(self , *args , **kwargs):
         if not self.slug_dev:

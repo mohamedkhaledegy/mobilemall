@@ -15,7 +15,6 @@ def single_product(request , slug):
 def brand_devices(request ,brd):
     lista = Device.objects.filter(brand=brd)
     context = {'device' : lista }
-    
     return render(request , 'pages/brand-devices.html',context)
 
 def brands_list(request):
