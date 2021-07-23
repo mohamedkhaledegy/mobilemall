@@ -1,0 +1,119 @@
+{% extends 'base.html' %} {% load static %} {% block title %} {{dev.nameDev}} {% endblock title %} {% block content %}
+
+<style>
+    #contsinglemob {
+        margin-top: 100px;
+        margin-bottom: 10px;
+    }
+    
+    .imgmob {}
+    
+    #name {}
+</style>
+
+
+<section id='contsinglemob' class="container cont bg-dark">
+    <br>
+    <div class='row'>
+        <div class="col-6">
+            <div class="row">
+                {% if dev.img_dev_full_1 %}
+                <div class="col">
+                    <img class="card-img imgmob" src="{{ dev.img_dev_full_1.url }}">
+                </div>
+                {% endif %} {% if dev.img_dev_full_2 %}
+                <div class="col">
+                    <img class="card-img imgmob" src="{{ dev.img_dev_full_2.url }}">
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class='col-5'>
+            <div id="contentmob">
+                <h2 id="name">
+                    {{dev.nameDev}}
+                </h2>
+                <div class='badge badge-primary' id="brand">
+                    {{dev.brand}}
+                </div>
+                <div class='' id="model">
+                    {{dev.model}}
+                </div>
+                <p id="displaySizeDev">
+                    {{dev.displaySizeDev}}
+                </p>
+                <p id="oSDev">
+                    {{dev.oSDev}}
+                </p>
+            </div>
+        </div>
+        <div class="col-2">
+
+        </div>
+        <div class="row">
+            <div class="col">
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="row">
+        <div class="col-7">
+
+        </div>
+        <div class="col-4">
+            <br>
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Network 
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the <code>.show</code> class.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Collapsible Group Item #2
+          </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Some placeholder content for the second accordion panel. This panel is hidden by default.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Collapsible Group Item #3
+          </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                            And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
