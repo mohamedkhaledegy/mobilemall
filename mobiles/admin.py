@@ -9,4 +9,12 @@ from import_export.admin import ImportExportModelAdmin
 class DeviceImportExport(ImportExportModelAdmin):
     pass
 
+@admin.register(Brand)
+class BrandImportExport(ImportExportModelAdmin):
+    pass
+
+@admin.register(Spare)
+class SpareImportExport(ImportExportModelAdmin):
+    pass
+
 # Register your models here.

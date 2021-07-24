@@ -13,25 +13,29 @@ class Color(models.Model):
 
     def __str__(self):
         return self.name
-
+ 
 
 class Brand(models.Model):
     brand_name = [
-            ('Samsung' , 'Samsung'),
-            ('Apple' , 'Apple'),
-            ('Huawei' , 'Huawei'),
-            ('Oppo' , 'Oppo'),
-            ('xiaomi' , 'xiaomi'),
+            ('Samsung' , 'Samsung'), #1
+            ('Apple' , 'Apple'), #2
+            ('Huawei' , 'Huawei'), #3
+            ('Oppo' , 'Oppo'), #4
+            ('xiaomi' , 'xiaomi'),  
             ('Infinix' , 'Infinix'),
             ('Nokia' , 'Nokia'),
             ('Sony' , 'Sony'),
             ('LG' , 'LG'),
-            ('HTC' , 'HTC'),
+            ('HTC' , 'HTC'), #10
             ('Lenovo' , 'Lenovo'),
             ('Realme' , 'Realme'),
             ('Honor' , 'Honor'),
-            ('ZTE' , 'ZTE'),
+            ('ZTE' , 'ZTE'), #14
             ('Vivo' , 'Vivo'),
+            ('Alcatel' , 'Alcatel'),
+            ('Asus' , 'Asus'),
+            ('Motorola' , 'Motorola'),
+            ('Acer' , 'Acer'),
         ]
     slug = models.SlugField(blank=True, null=True)
     name = models.CharField( choices=brand_name , max_length=100 , verbose_name=_('Brand Name'))
@@ -48,17 +52,24 @@ class Brand(models.Model):
 
 class Device(models.Model):
     #pdobjects = DataFrameManager()
+    
     slug_dev = models.SlugField(blank=True, null=True)
     brand = models.ForeignKey(Brand, blank=True, null=True, on_delete=models.PROTECT)
     modeldev = models.CharField(max_length=100, blank=True, null=True)
     nameDev = models.CharField(  max_length=320, verbose_name=_("Name"))
+    
     networkDev = models.CharField(max_length=500, blank=True, null=True, verbose_name=_("Network"))
+    
     announcedDev = models.CharField(max_length=500, blank=True, null=True, verbose_name=_("Announced"))
     statusDev = models.CharField(max_length=500, blank=True, null=True, verbose_name=_("Status"))
+    
     dimensionsDev = models.CharField(max_length=500, verbose_name=_("Device Dimensions"), blank=True, null=True)
-    wightDev = models.CharField(max_length=500, verbose_name=_("Device Wight"), blank=True, null=True)
+    wightDev = models.CharField(max_length=500, verbose_name=_("Device Weight"), blank=True, null=True)
     buildDev = models.CharField(max_length=500, verbose_name=_("Build"), blank=True, null=True)
+    
     simDev = models.CharField(max_length=500, verbose_name=_("Sim"), blank=True, null=True)
+    
+    
     displayTypeDev = models.CharField(max_length=500, verbose_name=_("Screen Type"), blank=True, null=True)
     displaySizeDev = models.CharField(max_length=500, verbose_name=_("Screen Size"), blank=True, null=True)
     displayResDev = models.CharField(max_length=500, verbose_name=_("Screen Resolution"), blank=True, null=True)
@@ -82,7 +93,9 @@ class Device(models.Model):
     batteryDev = models.CharField(max_length=500, verbose_name=_("Battery Type"), blank=True, null=True)
     priceDev = models.CharField(max_length=500, verbose_name=_("Price"), blank=True, null=True)
     imageDev = models.ImageField(upload_to='Devices/Devices_Img/', verbose_name=_("Image Device"), blank=True)
-    color = models.ForeignKey( Color ,blank=True, null=True , on_delete=models.CASCADE)
+    img_dev_full_1 = models.ImageField(upload_to='Devices/Devices_full_pic/', verbose_name=_("Full Image Device 1"), blank=True)
+    img_dev_full_2 = models.ImageField(upload_to='Devices/Devices_full_pic/', verbose_name=_("Full Image Device 1"), blank=True)
+    color = models.CharField( max_length=500, verbose_name=_("Color"), blank=True, null=True)
 
     def save(self , *args , **kwargs):
         if not self.slug_dev:

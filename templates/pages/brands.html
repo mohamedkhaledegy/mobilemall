@@ -1,33 +1,44 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
+
+<style>
+    .card-brand {
+        margin-left: 2px;
+        margin-bottom: 3px;
+        text-align: center;
+    }
+</style>
 <section class="container">
     <div class="brands-content">
-        <div>
-                <div class="">
-
-                </div>
+        <div class='row'>
             {% for brand in brands %}
-            <div class="card card-brand">
-                <div class="device-title">
-                    <h4>{{brand}}</h4>
-                </div>
-                <div class="card-body">
-                    <div class="device-image">
-
+            <div class="col-sm-3 col-md-2">
+                <div class="card card-brand">
+                    <div class="row">
+                        <div class="col">
+                            <div class="device-title">
+                                <a href="{% url 'brand_mobiles' slug=brand.slug %}">
+                                    <h5>{{brand}}</h5>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="device-btns btn-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <a href="{% url 'brand_mobiles' slug=brand.slug %}" class="btn-sm btn-outline-info">Devices</a>
+                                    </div>
+                                    <div class="col">
+                                        <a href="{% url 'brand_spares' slug=brand.slug %}" class="btn-sm btn-outline-success">Spares</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="btn-card-devices">
-                        <a href="{% url 'brand-mobiles' %}" class="btn btn-outline-info">Mobiles</a>
-                        <a href="{% url 'brand-spares' %}" class="btn btn-outline-success">Spares</a>
-                        <a href="{% url 'brand-accessories' %}" class="btn btn-outline-warning">Accessories</a>
-                    </div>
                 </div>
-
             </div>
             {% endfor %}
         </div>
     </div>
 </section>
-
-
 
 {% endblock content %}
